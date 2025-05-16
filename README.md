@@ -25,6 +25,17 @@ Things you may want to cover:
 
 ## INTRO TO RAILS VIEWS
 
-Command to generate a controller with its conrresponding view: rails generate controller Hello index
+Command to generate a controller with its conrresponding view: 
 
-Command to generate a controller with its corresponding view without actually making changes to the application: rails generate controller Goodbye index --pretend
+1. rails generate controller Hello index
+2. rails generate controller Posts make print
+
+Command to generate a controller with its corresponding view without actually making changes to the application: rails generate controller Goodbye index --pretend, rails generate controller Posts make print --pretend
+
+## INTRO TO RAILS MODELS
+
+Command to generate the database model: rails generate model Post
+
+Then run rails db:migrate to complete the process
+
+Code block to get all posts is: <%= Post.all.length %>
