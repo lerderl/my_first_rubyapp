@@ -39,3 +39,11 @@ Command to generate the database model: rails generate model Post
 Then run rails db:migrate to complete the process
 
 Code block to get all posts is: <%= Post.all.length %>
+
+## INTRO TO RAILS REST ( REpresentation State Transfer)
+
+Commands to generate the REST actions:
+1. rails generate controller Posts index show new create edit update destroy
+2. rails generate controller Posts make print --pretend
+3. rails generate scaffold Post title:string content:text ( if starting from scratch without the views and the models)
+4. rails generate controller Posts index show new create edit update destroy --skip-collision-check --pretend ( for conflicts )
