@@ -19,7 +19,7 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 # For env
-gem 'dotenv-rails', groups: [:development, :test]
+gem "dotenv-rails", groups: [ :development, :test ]
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -35,6 +35,18 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+# Install RuboCop if not already present
+# gem install rubocop
+
+# Run RuboCop to see errors
+# bundle exec rubocop or simply rubocop
+
+# Auto-correct fixable offenses
+# bundle exec rubocop -a
+
+# For more aggressive auto-correct (may require review)
+# bundle exec rubocop -A
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
