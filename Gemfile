@@ -62,6 +62,14 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # Check for vulnerable gems
+  gem "bundler-audit"
+  # Basic check
+  # bundle audit
+
+  # Check and update the vulnerability database
+  # bundle audit check --update
+  # bundle exec bundle-audit
 end
 
 group :test do
