@@ -14,4 +14,25 @@ class PostsController < ApplicationController
     @post1 = Post.find(1)
     @post2 = Post.last
   end
+
+  def index
+  end
+
+  def show
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
 end
