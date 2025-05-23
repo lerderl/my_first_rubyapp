@@ -47,3 +47,13 @@ Commands to generate the REST actions:
 2. rails generate controller Posts make print --pretend
 3. rails generate scaffold Post title:string content:text ( if starting from scratch without the views and the models)
 4. rails generate controller Posts index show new create edit update destroy --skip-collision-check --pretend ( for conflicts )
+
+## RAILS TEST COMMANDS
+1. rake
+2. rails test
+3. rails test:system
+
+For lint and dependencies
+4. bundle exec rubocop
+5.  bundle exec brakeman
+6.  bundle audit check --update
