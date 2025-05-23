@@ -14,8 +14,10 @@ class ArticlesTest < ApplicationSystemTestCase
     visit articles_url
     click_on "New article"
 
-    fill_in "Content", with: @article.content
-    fill_in "Title", with: @article.title
+
+    fill_in "Content", with: "Valid content that isn't too long and contains no bad words"
+    fill_in "Title", with: "Unique Title #{rand(1000)}"# fill_in "Content", with: @article.content
+    # fill_in "Title", with: @article.title
     click_on "Create Article"
 
     assert_text "Article was successfully created"
@@ -26,8 +28,10 @@ class ArticlesTest < ApplicationSystemTestCase
     visit article_url(@article)
     click_on "Edit this article", match: :first
 
-    fill_in "Content", with: @article.content
-    fill_in "Title", with: @article.title
+    fill_in "Content", with: "Short and clean content"
+    fill_in "Title", with: "Updated Title #{rand(1000)}"
+    # fill_in "Content", with: @article.content
+    # fill_in "Title", with: @article.title
     click_on "Update Article"
 
     assert_text "Article was successfully updated"

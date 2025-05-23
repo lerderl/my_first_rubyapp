@@ -15,6 +15,13 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should NOT create article with bad word" do
+    assert_no_difference("Article.count") do
+      post articles_url, params: { article: { title: "Test#{rand(1000)}", content: "fuck" } }
+    end
+    assert_response :unprocessable_entity
+  end
+
   test "should create article" do
     assert_difference("Article.count", 1) do
       post articles_url, params: {
