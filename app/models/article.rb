@@ -5,6 +5,8 @@ class Article < ApplicationRecord
   # Custome validation
   validate :check_content_length, :cant_say_fuck
 
+  has_many :comments, dependent: :destroy
+
   # checking content length
   def check_content_length
     if content.length > 1000

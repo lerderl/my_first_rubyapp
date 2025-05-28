@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
   get "posts/index"
   get "posts/show"
   get "posts/new"

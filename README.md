@@ -57,3 +57,12 @@ For lint and dependencies
 4. bundle exec rubocop
 5.  bundle exec brakeman
 6.  bundle audit check --update
+
+## RAILS RELATIONSHIPS
+
+Commands to generate Comments resource:
+1. rails generate model Comment article:references user:references
+2. rails generate resource Comment article_id:integer user_id:integer
+3. rails generate resource Comment article_id:integer user_id:integer --skip-collision-check --
+4. rails generate resource Comment
+5. rails generate migration AddParentToComments parent:references ( to update the datatbase )

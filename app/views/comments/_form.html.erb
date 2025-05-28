@@ -1,0 +1,16 @@
+<!-- app/views/comments/_form.html.erb -->
+<%= form_with(model: [ @article, @comment || @article.comments.build ], local: true) do |form| %>
+  <% if @comment && @comment.article_id %>
+    <%= form.hidden_field :article_id %>
+    <p>Replying to <%= @comment.article_id %></p>
+  <% end %>
+  
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
