@@ -1,0 +1,14 @@
+<!-- app/views/comments/_comment.html.erb -->
+<div class="comment" style="margin-left: <%= 20 * comment.depth %>px;">
+  <p><%= comment.content %></p>
+  
+  <!-- Reply link -->
+  <%= link_to 'Reply', new_article_comment_path(@article, article_id: comment), remote: true %>
+  
+  <!-- Render replies if any -->
+  <% if comment.replies.any? %>
+    <div class="replies">
+      <%= render comment.replies %>
+    </div>
+  <% end %>
+</div>
